@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Blur Extension</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="container">
+
+        <!-- *********HEADER********* -->
+        <div class="header">
+            <div class="title">
+                <a href="https://defend-her.vercel.app/" target="_blank" class="logo"><img src="images/Logo.png" alt="" class="header-logo"></a>
+            </div>
+            <div class="toggle">
+                <label class="switch">
+                    <input type="checkbox" id="toggleBlur">
+                    <span class="slider"></span>
+                </label>
+                <label for="toggleBlur" id="toggle-text">Enable Blur</label>
+                <i class="fas fa-question-circle question" title="Turn on/off blurring"></i>
+            </div>
+        </div>
+
+        <!-- *********CONTENT********* -->
+        <div class="content">
+            <div id="wordListContainer">
+                <div class="input-group">
+                    <input type="text" id="wordInput" class="input-field" placeholder="Add word to blur">
+                    <button id="addWordButton" class="btn">
+                        <i class="fas fa-plus add-icon"></i> Add
+                    </button>
+                </div>
+                <div class="blurred-words-header">
+                    <h2 class="blurred-txt">Blurred Words:</h2>
+                    <button id="removeAllButton" class="btn-remove-all"><i class="fas fa-trash"></i> Remove All</button>
+                </div>
+                <ul id="wordList"></ul>
+            </div>
+            <div id="extensionOffMessage">
+                <span id="activate-text" class="shake">Activate the extension to get access to its functionality!</span>
+                <!-- <span class="arrow">&#8594;</span> -->
+            </div>
+        </div>
+        
+        <footer>
+            <p>If you have any suggestions or bug reports, please feel free to<a href="mailto:support@ieee.org">Send us an email <i class="fas fa-arrow-right footer-icon"></i></a></p>
+        </footer>
+        
+        
+               
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
